@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using DiaryApp.Data;
 
 namespace DiaryApp.Controllers;
-public class DiaryEntriesController : Controller
+
+public class DiaryEntriesController(ApplicationDbContext context) : Controller
 {
     public IActionResult Index()
     {
-        return View();
+        var diaryEntries = context.DiaryEntries.ToList();
+        return View(diaryEntries);
     }
 }
