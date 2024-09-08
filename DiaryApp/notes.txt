@@ -1,0 +1,9 @@
+﻿
+
+Four steps to add a table
+-------------------------
+
+1. Create a model class
+2. Add a DB Set
+3. add a migration e.g., add-migration AddDiaryEntryTable
+4. Update the database e.g., update-database
